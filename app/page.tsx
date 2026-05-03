@@ -184,7 +184,8 @@ export default function Home() {
                     <p className="pl-4 text-slate-500">{"// CI/CD to Railway/AWS"}</p>
                     <p>project.<span className="text-blue-300">deploy</span>();</p>
                     <br/>
-                    <p className="text-emerald-400">>> [Success] System live. Monitoring active.</p>
+                    {/* BUG FIXED HERE: Wrapped >> in curly braces and quotes */}
+                    <p className="text-emerald-400">{">>"} [Success] System live. Monitoring active.</p>
                 </div>
             </div>
         </div>
@@ -232,7 +233,7 @@ export default function Home() {
                 </span>
               </summary>
               <div className="text-slate-400 px-7 pb-8 pt-0 leading-relaxed text-base border-t border-slate-800/50 mt-1">
-                We utilize modern Continuous Integration/Continuous Deployment (CI/CD) pipelines. Depending on the project requirements, we deploy across tailored cloud environments including Railway (for rapid scaling), AWS (for complex compliance needs), or specialized cPanel setups for lagacy system integrations when necessary.
+                We utilize modern Continuous Integration/Continuous Deployment (CI/CD) pipelines. Depending on the project requirements, we deploy across tailored cloud environments including Railway (for rapid scaling), AWS (for complex compliance needs), or specialized cPanel setups for legacy system integrations when necessary.
               </div>
             </details>
 
@@ -257,7 +258,7 @@ export default function Home() {
       <footer id="contact" className="border-t border-slate-800/50 pt-28 pb-10 text-center relative z-10 px-6 lg:px-24">
         <div className="max-w-4xl mx-auto mb-28">
             <div className="w-20 h-20 rounded-2xl bg-indigo-600/10 border border-indigo-800 flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.2)] mx-auto mb-8 font-mono text-4xl text-indigo-300">Q</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-white leaders-[1.1]">Ready to scale your technical infrastructure?</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-white leading-[1.1]">Ready to scale your technical infrastructure?</h2>
           <p className="text-xl text-slate-400 mb-16 leading-relaxed max-w-2xl mx-auto">Contact our engineering lead today to discuss your next system architecture or software deployment.</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a href="mailto:contact@quadrox.tech" className="inline-block bg-white text-slate-950 px-10 py-5 rounded-full font-bold text-lg hover:bg-slate-200 transition-all hover:scale-105 shadow-md">
