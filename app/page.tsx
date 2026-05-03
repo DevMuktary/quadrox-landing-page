@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 // Common icon SVGs defined here to keep the main structure clean
