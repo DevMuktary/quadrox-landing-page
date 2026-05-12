@@ -13,7 +13,7 @@ const Icons = {
 };
 
 export default function Home() {
-  const whatsappUrl = "https://wa.me/2349033358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
+  const whatsappUrl = "https://wa.me/234903358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-x-hidden">
@@ -24,12 +24,23 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="flex justify-between items-center py-4 px-6 lg:px-24 border-b border-slate-800/50 backdrop-blur-lg fixed w-full top-0 z-50 bg-[#020617]/80">
-        <div className="text-xl font-bold tracking-tight text-white flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.5)]">
-            <span className="font-mono text-xl">Q</span>
-          </div>
-          QUADROX TECHNOLOGY
+        
+        {/* LOGO IMPLEMENTATION */}
+        <div className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="Quadrox Technology Logo" 
+            className="h-10 w-auto object-contain" 
+            onError={(e) => {
+              // Fallback if the image isn't found in the public folder yet
+              (e.target as HTMLImageElement).style.display = 'none';
+              (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback text that shows if logo is missing, hidden by default */}
+          <span className="hidden text-xl font-bold tracking-tight text-white">QUADROX</span>
         </div>
+
         <div className="hidden lg:flex space-x-10 text-sm font-medium text-slate-300">
           <a href="#services" className="hover:text-indigo-400 transition-colors">Services</a>
           <a href="#approach" className="hover:text-indigo-400 transition-colors">Approach</a>
@@ -40,6 +51,7 @@ export default function Home() {
                 <Icons.WhatsApp />
                 Chat Now
             </a>
+            {/* Reduced nav button size slightly */}
             <a href="#contact" className="bg-white hover:bg-slate-200 text-slate-950 px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-md">
             Start Project
             </a>
@@ -61,11 +73,13 @@ export default function Home() {
         <p className="text-xl lg:text-2xl text-slate-400 max-w-3xl mb-16 leading-relaxed animate-fade-in-up-delayed">
           Quadrox Technology Limited builds robust custom software, secure fintech platforms, and scalable cloud infrastructure for visionary businesses globally.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 w-full justify-center animate-fade-in-up-delayed-2">
-          <a href="#contact" className="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-[0_0_30px_rgba(79,70,229,0.4)] hover:shadow-[0_0_40px_rgba(79,70,229,0.6)] hover:-translate-y-1">
+        <div className="flex flex-col sm:flex-row gap-5 w-full justify-center animate-fade-in-up-delayed-2">
+          {/* Reduced Hero Button 1: padding and text size reduced */}
+          <a href="#contact" className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3.5 rounded-full font-bold text-base transition-all shadow-[0_0_30px_rgba(79,70,229,0.4)] hover:shadow-[0_0_40px_rgba(79,70,229,0.6)] hover:-translate-y-1">
             Request Engineering Proposal
           </a>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2.5 border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-white px-10 py-5 rounded-full font-bold text-lg transition-all hover:border-emerald-500 hover:text-emerald-300">
+          {/* Reduced Hero Button 2: padding and text size reduced */}
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-white px-8 py-3.5 rounded-full font-bold text-base transition-all hover:border-emerald-500 hover:text-emerald-300">
             <Icons.WhatsApp />
             Message on WhatsApp
           </a>
@@ -151,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Approach/Process Section (New, adds robustness) */}
+      {/* Approach/Process Section */}
       <section id="approach" className="py-28 px-6 lg:px-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
@@ -186,7 +200,6 @@ export default function Home() {
                     <p className="pl-4 text-slate-500">{"// CI/CD to Railway/AWS"}</p>
                     <p>project.<span className="text-blue-300">deploy</span>();</p>
                     <br/>
-                    {/* BUG FIXED HERE: Wrapped >> in curly braces and quotes */}
                     <p className="text-emerald-400">{">>"} [Success] System live. Monitoring active.</p>
                 </div>
             </div>
@@ -259,16 +272,33 @@ export default function Home() {
       {/* CTA & Footer */}
       <footer id="contact" className="border-t border-slate-800/50 pt-28 pb-10 text-center relative z-10 px-6 lg:px-24">
         <div className="max-w-4xl mx-auto mb-28">
-            <div className="w-20 h-20 rounded-2xl bg-indigo-600/10 border border-indigo-800 flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.2)] mx-auto mb-8 font-mono text-4xl text-indigo-300">Q</div>
+          
+          {/* FOOTER LOGO IMPLEMENTATION */}
+          <div className="flex justify-center mb-10">
+            <img 
+                src="/logo.png" 
+                alt="Quadrox Technology Logo" 
+                className="h-16 w-auto object-contain" 
+                onError={(e) => {
+                // Fallback icon if the logo isn't in the public folder
+                (e.target as HTMLImageElement).style.display = 'none';
+                (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                }}
+            />
+            {/* Fallback Icon */}
+            <div className="hidden w-20 h-20 rounded-2xl bg-indigo-600/10 border border-indigo-800 flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.2)] font-mono text-4xl text-indigo-300">Q</div>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-white leading-[1.1]">Ready to scale your technical infrastructure?</h2>
-          <p className="text-xl text-slate-400 mb-16 leading-relaxed max-w-2xl mx-auto">Contact our engineering lead today to discuss your next system architecture or software deployment.</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="mailto:contact@quadrox.tech" className="inline-block bg-white text-slate-950 px-10 py-5 rounded-full font-bold text-lg hover:bg-slate-200 transition-all hover:scale-105 shadow-md">
+          <p className="text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">Contact our engineering lead today to discuss your next system architecture or software deployment.</p>
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            {/* Reduced Footer Button: padding and text size reduced */}
+            <a href="mailto:contact@quadrox.tech" className="inline-block bg-white text-slate-950 px-8 py-3.5 rounded-full font-bold text-base hover:bg-slate-200 transition-all hover:scale-105 shadow-md">
                 Contact Engineering Team
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2.5 font-bold text-lg text-emerald-400 hover:text-emerald-300 transition-colors">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 font-bold text-base text-emerald-400 hover:text-emerald-300 transition-colors">
                 <Icons.WhatsApp />
-                +234 9033 358 098
+                +234 903 358 098
             </a>
           </div>
         </div>
@@ -288,7 +318,7 @@ export default function Home() {
             <Icons.WhatsApp />
         </a>
 
-        {/* Custom Keyframe Animations (Injected directly for single file scope) */}
+        {/* Custom Keyframe Animations */}
         <style jsx global>{`
             @keyframes fade-in-up {
                 from { opacity: 0; transform: translateY(20px); }
