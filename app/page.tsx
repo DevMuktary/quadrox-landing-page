@@ -13,6 +13,7 @@ const Icons = {
 };
 
 export default function Home() {
+  // Updated with the correct triple 3 number
   const whatsappUrl = "https://wa.me/2349033358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
 
   return (
@@ -29,7 +30,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           <img 
             src="/logo.png" 
-            alt="Quadrox Technology Logo" 
+            alt="Quadrox Technologies Limited Logo" 
             className="h-10 w-auto object-contain" 
             onError={(e) => {
               // Fallback if the image isn't found in the public folder yet
@@ -67,11 +68,19 @@ export default function Home() {
           </span>
           SECURE. SCALABLE. HIGH-PERFORMANCE.
         </div>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-10 leading-[0.95] text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 animate-fade-in-up">
-          Engineering the<br /> Digital Enterprise.
-        </h1>
+        
+        {/* ADDED COMPANY NAME HERE */}
+        <div className="animate-fade-in-up flex flex-col items-center">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-widest text-indigo-400 uppercase mb-4 opacity-90">
+                Quadrox Technologies Limited
+            </h2>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-10 leading-[0.95] text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">
+            Engineering the<br /> Digital Enterprise.
+            </h1>
+        </div>
+
         <p className="text-xl lg:text-2xl text-slate-400 max-w-3xl mb-16 leading-relaxed animate-fade-in-up-delayed">
-          Quadrox Technology Limited builds robust custom software, secure fintech platforms, and scalable cloud infrastructure for visionary businesses globally.
+          We build robust custom software, secure fintech platforms, and scalable cloud infrastructure for visionary businesses globally.
         </p>
         <div className="flex flex-col sm:flex-row gap-5 w-full justify-center animate-fade-in-up-delayed-2">
           {/* Reduced Hero Button 1: padding and text size reduced */}
@@ -277,7 +286,7 @@ export default function Home() {
           <div className="flex justify-center mb-10">
             <img 
                 src="/logo.png" 
-                alt="Quadrox Technology Logo" 
+                alt="Quadrox Technologies Limited Logo" 
                 className="h-16 w-auto object-contain" 
                 onError={(e) => {
                 // Fallback icon if the logo isn't in the public folder
@@ -298,12 +307,12 @@ export default function Home() {
             </a>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 font-bold text-base text-emerald-400 hover:text-emerald-300 transition-colors">
                 <Icons.WhatsApp />
-                +234 9033 358 098
+                0903 335 8098
             </a>
           </div>
         </div>
         <div className="text-slate-600 text-sm border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
-          <p>© {new Date().getFullYear()} Quadrox Technology Limited. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Quadrox Technologies Limited. All Rights Reserved.</p>
           <p className="font-mono text-xs opacity-50">Secure Deployment Active</p>
           <div className="flex space-x-8">
             <a href="#" className="hover:text-slate-300 transition-colors">Privacy</a>
@@ -314,7 +323,7 @@ export default function Home() {
 
         {/* Floating WhatsApp Action Button */}
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 p-4 bg-emerald-600 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:bg-emerald-500 transition-all duration-300 hover:scale-110 group animate-bounce-slow">
-            <span className="absolute bottom-full mb-3 right-0 scale-0 group-hover:scale-100 transition-transform bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-lg whitespace-nowrap shadow-xl">Chat with us +234903358098</span>
+            <span className="absolute bottom-full mb-3 right-0 scale-0 group-hover:scale-100 transition-transform bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-lg whitespace-nowrap shadow-xl">Chat with us 09033358098</span>
             <Icons.WhatsApp />
         </a>
 
