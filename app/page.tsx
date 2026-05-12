@@ -13,7 +13,6 @@ const Icons = {
 };
 
 export default function Home() {
-  // Updated with the correct triple 3 number
   const whatsappUrl = "https://wa.me/2349033358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
 
   return (
@@ -33,12 +32,10 @@ export default function Home() {
             alt="Quadrox Technologies Limited Logo" 
             className="h-10 w-auto object-contain" 
             onError={(e) => {
-              // Fallback if the image isn't found in the public folder yet
               (e.target as HTMLImageElement).style.display = 'none';
               (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
             }}
           />
-          {/* Fallback text that shows if logo is missing, hidden by default */}
           <span className="hidden text-xl font-bold tracking-tight text-white">QUADROX</span>
         </div>
 
@@ -52,15 +49,14 @@ export default function Home() {
                 <Icons.WhatsApp />
                 Chat Now
             </a>
-            {/* Reduced nav button size slightly */}
             <a href="#contact" className="bg-white hover:bg-slate-200 text-slate-950 px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-md">
             Start Project
             </a>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-48 pb-32 px-6 lg:px-24 relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
+      {/* Hero Section - Reduced pt-48 to pt-32 to close the gap */}
+      <section className="pt-32 pb-32 px-6 lg:px-24 relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-indigo-950 border border-indigo-800 text-indigo-300 text-xs font-semibold tracking-wide mb-8 animate-fade-in-down">
           <span className="relative flex h-2 w-2 mr-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -69,7 +65,6 @@ export default function Home() {
           SECURE. SCALABLE. HIGH-PERFORMANCE.
         </div>
         
-        {/* ADDED COMPANY NAME HERE */}
         <div className="animate-fade-in-up flex flex-col items-center">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-widest text-indigo-400 uppercase mb-4 opacity-90">
                 Quadrox Technologies Limited
@@ -83,11 +78,9 @@ export default function Home() {
           We build robust custom software, secure fintech platforms, and scalable cloud infrastructure for visionary businesses globally.
         </p>
         <div className="flex flex-col sm:flex-row gap-5 w-full justify-center animate-fade-in-up-delayed-2">
-          {/* Reduced Hero Button 1: padding and text size reduced */}
           <a href="#contact" className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3.5 rounded-full font-bold text-base transition-all shadow-[0_0_30px_rgba(79,70,229,0.4)] hover:shadow-[0_0_40px_rgba(79,70,229,0.6)] hover:-translate-y-1">
             Request Engineering Proposal
           </a>
-          {/* Reduced Hero Button 2: padding and text size reduced */}
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-white px-8 py-3.5 rounded-full font-bold text-base transition-all hover:border-emerald-500 hover:text-emerald-300">
             <Icons.WhatsApp />
             Message on WhatsApp
@@ -289,19 +282,16 @@ export default function Home() {
                 alt="Quadrox Technologies Limited Logo" 
                 className="h-16 w-auto object-contain" 
                 onError={(e) => {
-                // Fallback icon if the logo isn't in the public folder
                 (e.target as HTMLImageElement).style.display = 'none';
                 (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
                 }}
             />
-            {/* Fallback Icon */}
             <div className="hidden w-20 h-20 rounded-2xl bg-indigo-600/10 border border-indigo-800 flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.2)] font-mono text-4xl text-indigo-300">Q</div>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-white leading-[1.1]">Ready to scale your technical infrastructure?</h2>
           <p className="text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">Contact our engineering lead today to discuss your next system architecture or software deployment.</p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-            {/* Reduced Footer Button: padding and text size reduced */}
             <a href="mailto:contact@quadrox.tech" className="inline-block bg-white text-slate-950 px-8 py-3.5 rounded-full font-bold text-base hover:bg-slate-200 transition-all hover:scale-105 shadow-md">
                 Contact Engineering Team
             </a>
