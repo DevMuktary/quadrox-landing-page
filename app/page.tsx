@@ -13,7 +13,7 @@ const Icons = {
 };
 
 export default function Home() {
-  const whatsappUrl = "https://wa.me/234903358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
+  const whatsappUrl = "https://wa.me/2349033358098?text=Hello%20Quadrox%2C%20I'm%20interested%20in%20your%20software%20development%20services.";
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-x-hidden">
@@ -298,7 +298,7 @@ export default function Home() {
             </a>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 font-bold text-base text-emerald-400 hover:text-emerald-300 transition-colors">
                 <Icons.WhatsApp />
-                +234 903 358 098
+                +234 9033 358 098
             </a>
           </div>
         </div>
